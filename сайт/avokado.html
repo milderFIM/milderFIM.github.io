@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт салата</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Гармония Тела - ваш путеводитель к здоровому образу жизни. Рецепты, тренировки, советы по питанию.">
+	<meta name="keywords" content="здоровье, питание, тренировки, фитнес, рецепты, калькулятор калорий">
+	<meta property="og:title" content="Гармония Тела">
+	<meta property="og:description" content="Найдите баланс своего тела и духа">
+	<meta property="og:image" content="images/минимализм.jpeg">
+</head>
+<body>
+    <!-- шапка сайта -->
+	<header class="header">
+		<div class="container">
+			<a href="index.html" class="logo">Гармония Тела</a>
+			
+			<!-- обертка для навигации -->
+			<nav class="main-nav">
+				<!-- список ссылок -->
+				<ul id="nav-links">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="nutrition.html" class="active">Питание</a></li>
+					<li><a href="workouts.html">Тренировки</a></li>
+					<li><a href="blog.html">Блог</a></li>
+					<li><a href="about.html">О проекте</a></li>
+				</ul>
+			</nav>
+			
+			<!-- иконка гамбургера -->
+			<div id="hamburger-icon">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+			
+		</div>
+	</header>
+
+	<main>
+		<!-- баннер страницы -->
+		<section class="hero-avo">
+			<div class="hero-content">
+				<h2>Рецепт салата</h2>
+			</div>
+		</section>
+		<div class="otstup">
+			<p><b>Салат с курицей и авокадо</b></p>
+		</div>
+		<hr>
+		<p style="font-size: x-large; margin-left: 20px;"><br><b>Польза салата с курицей и авокадо</b>
+		<br><b>Основные компоненты и их польза:</b>
+		<br>Куриная грудка является главным источником белка в этом блюде.Она обеспечивает организм:
+		<br>—Высоким качеством белка для роста и восстановления тканей
+		<br>—Витаминами группы В для поддержания нервной системы
+		<br>—Железом, необходимым для кроветворения
+		<br>—Авокадо дополняет салат ценными компонентами:
+		<br>—Мононенасыщенными жирами, снижающими уровень холестерина
+		<br>—Витамином Е для здоровья кожи
+		<br>—Витамином К для укрепления костей
+		<br>—Фолиевой кислотой
+		<br>—Калий для нормальной работы сердца</p>
+		<div class="txtovs">
+        <p style="font-size: xx-large;">Ингредиенты:<br><b>200г куриной грудки<br>авокадо 1шт<br>помидоры черри 5шт<br>листья салата 10г<br>оливковое масло 2ст.л.<br>соль по вкусу</b></p>
+		</div>
+		<hr>
+		<div class="otstup">
+			<h2><b>РЕЦЕПТ</h2>
+				<p>ШАГ 1</p>
+		</div>
+		<p style="font-size: x-large; margin-left: 20px;">Куриную грудку нарезать ломтиками, обжарить с двух сторон до готовности.</p>
+		<div class="otstup">
+			<p>ШАГ 2</p>
+		</div>
+		<p style="font-size: x-large; margin-left: 20px;">Авокадо очистить, нарезать тонкими дольками, помидоры черри — на четвертинки.</p>
+		<div class="otstup">
+			<p>ШАГ 3</p>
+		</div>
+		<p style="font-size: x-large; margin-left: 20px;">Листья салата нарвать или нарезать ножницами.</p>
+		<div class="otstup">
+			<p>ШАГ 4</p>
+		</div>
+		<p style="font-size: x-large; margin-left: 20px; margin-bottom: 70px;">На блюдо горкой выложить листья салата, сверху выложить помидоры, курицу и авокадо, полить оливковым маслом.</p>
+    </main>
+	<!-- подвал сайта -->
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; 2026 Гармония Тела</p>
+			<p style="margin-top: 5px; font-size: 0.7rem; opacity: 0.6;">
+				<a href="privacy.html" style="color: inherit;">Политика конфиденциальности</a> | 
+				<a href="use.html" style="color: inherit;">Условия использования</a>
+			</p>
+		</div>
+	</footer>
+	
+	<div id="preloader" style="
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: var(--bg-color);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 9999;
+		transition: opacity 0.5s;
+	">
+		<div class="spinner" style="width: 60px; height: 60px;"></div>
+	</div>
+	
+	<script>
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				document.getElementById('preloader').style.opacity = '0';
+				setTimeout(() => {
+					document.getElementById('preloader').style.display = 'none';
+				}, 500);
+			}, 1000);
+		});
+	</script>
+	
+	<script src="script.js"></script>
+    
+</body>
+</html>

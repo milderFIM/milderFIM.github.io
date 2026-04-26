@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт овсянки</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Гармония Тела - ваш путеводитель к здоровому образу жизни. Рецепты, тренировки, советы по питанию.">
+	<meta name="keywords" content="здоровье, питание, тренировки, фитнес, рецепты, калькулятор калорий">
+	<meta property="og:title" content="Гармония Тела">
+	<meta property="og:description" content="Найдите баланс своего тела и духа">
+	<meta property="og:image" content="images/минимализм.jpeg">
+</head>
+<body>
+    <!-- шапка сайта -->
+	<header class="header">
+		<div class="container">
+			<a href="index.html" class="logo">Гармония Тела</a>
+			
+			<!-- обертка для навигации -->
+			<nav class="main-nav">
+				<!-- список ссылок -->
+				<ul id="nav-links">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="nutrition.html" class="active">Питание</a></li>
+					<li><a href="workouts.html">Тренировки</a></li>
+					<li><a href="blog.html">Блог</a></li>
+					<li><a href="about.html">О проекте</a></li>
+				</ul>
+			</nav>
+			
+			<!-- иконка гамбургера -->
+			<div id="hamburger-icon">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+			
+		</div>
+	</header>
+
+	<main>
+		<!-- баннер страницы -->
+		<section class="hero-ovs">
+			<div class="hero-content">
+				<h2>Рецепт вкусной и полезной овсянки</h2>
+			</div>
+		</section>
+		<div class="otstup">
+			<p><b>Овсяная каша с ягодами и орехами</b></p>
+		</div>
+		<hr>
+		<p style="font-size: x-large; margin-left: 20px;"><b>Овсянка заслуженно считается одним из самых полезных завтраков, и вот почему:</b>
+		<br>-Богатство клетчаткой. Одна порция овсянки содержит около 4 граммов клетчатки, что составляет 14% от суточной нормы. Это помогает поддерживать здоровье кишечника и защищает от различных заболеваний.
+		<br>-Защита сердца. Овсянка содержит особые растворимые волокна — бета-глюканы, которые эффективно снижают уровень “плохого” холестерина. Люди, регулярно употребляющие овсянку, на 14% реже страдают сердечно-сосудистыми заболеваниями.
+		<br>-Контроль веса. Благодаря сложным углеводам и клетчатке овсянка обеспечивает длительное чувство сытости, что помогает контролировать аппетит и поддерживать здоровый вес.</p>
+		<div class="txtovs">
+        <p style="font-size: xx-large;">Ингредиенты:<br><b>100г овсянки<br>300мл молока<br>50г фундука<br>100г ягод<br>соль<br>сахар по вкусу</b></p>
+		</div>
+		<hr>
+		<div class="otstup">
+			<h2><b>РЕЦЕПТ</h2>
+				<p>ШАГ 1</p>
+		</div>
+		<p style="font-size: x-large; margin-left: 20px;">Высыпать хлопья в кастрюлю, залить молоком, добавить щепотку соли и довести до кипния.<br>Уменьшить нагрев до минимального и варить 3 минуты, помешивая.</p>
+		<div class="otstup">
+			<p>ШАГ 2</p>
+		</div>
+		<p style="font-size: x-large; margin-left: 20px;">Обжарьте орехи на сухой сковороде 3 минуты и мелко порубите.</p>
+		<div class="otstup">
+			<p>ШАГ 3</p>
+		</div>
+		<p style="font-size: x-large; margin-left: 20px;">Ягоды нарезать ломтиками.</p>
+		<div class="otstup">
+			<p>ШАГ 4</p>
+		</div>
+		<p style="font-size: x-large; margin-left: 20px; margin-bottom: 70px;">Кашу выложить на тарелку и посыпать орехами и ягодами.</p>
+    </main>
+	<!-- подвал сайта -->
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; 2026 Гармония Тела</p>
+			<p style="margin-top: 5px; font-size: 0.7rem; opacity: 0.6;">
+				<a href="privacy.html" style="color: inherit;">Политика конфиденциальности</a> | 
+				<a href="use.html" style="color: inherit;">Условия использования</a>
+			</p>
+		</div>
+	</footer>
+	
+	<div id="preloader" style="
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: var(--bg-color);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 9999;
+		transition: opacity 0.5s;
+	">
+		<div class="spinner" style="width: 60px; height: 60px;"></div>
+	</div>
+	
+	<script>
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				document.getElementById('preloader').style.opacity = '0';
+				setTimeout(() => {
+					document.getElementById('preloader').style.display = 'none';
+				}, 500);
+			}, 1000);
+		});
+	</script>
+	
+	<script src="script.js"></script>
+    
+</body>
+</html>
