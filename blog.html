@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Блог - Гармония Тела</title>
+	<link rel="stylesheet" href="style.css">
+	
+	<meta name="description" content="Гармония Тела - ваш путеводитель к здоровому образу жизни. Рецепты, тренировки, советы по питанию.">
+	<meta name="keywords" content="здоровье, питание, тренировки, фитнес, рецепты, калькулятор калорий">
+	<meta property="og:title" content="Гармония Тела">
+	<meta property="og:description" content="Найдите баланс своего тела и духа">
+	<meta property="og:image" content="images/минимализм.jpeg">
+</head>
+<body>
+
+	<!-- шапка сайта -->
+	<header class="header">
+		<div class="container">
+			<a href="index.html" class="logo">Гармония Тела</a>
+			
+			<!-- обертка для навигации -->
+			<nav class="main-nav">
+				<!-- список ссылок -->
+				<ul id="nav-links">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="nutrition.html">Питание</a></li>
+					<li><a href="workouts.html">Тренировки</a></li>
+					<li><a href="blog.html" class="active">Блог</a></li>
+					<li><a href="about.html">О проекте</a></li>
+				</ul>
+			</nav>
+			
+			<!-- иконка гамбургера. появляется только на мобильных -->
+			<div id="hamburger-icon">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<!-- баннер страницы -->
+		<section class="hero-blog">
+			<div class="hero-content">
+				<h2>База знаний о здоровом образе жизни</h2>
+				<p>Статьи о мотивации, полезных привычках и научных фактах о здоровье.</p>
+			</div>
+		</section>
+
+		<!-- основной макет страницы с сайдбаром -->
+		<div class="blog-layout">
+			<div class="container">
+				<!-- основной контент (статьи) -->
+				<div class="blog-main-content">
+					
+					<!-- превью первой статьи -->
+					<article class="post-preview">
+						<img src="images/мотивация.jpeg" alt="Мотивация">
+						<div class="post-content">
+							<h3>5 научно доказанных способов повысить мотивацию к тренировкам</h3>
+							<p class="post-excerpt">Устали откладывать спорт на завтра? Узнайте, как работает мотивация с точки зрения науки и какие простые шаги помогут вам не сходить с пути...</p>
+							<a href="404.html" class="btn-read-more">Читать далее &rarr;</a>
+						</div>
+					</article>
+
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- подвал сайта -->
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; 2026 Гармония Тела</p>
+			<p style="margin-top: 5px; font-size: 0.7rem; opacity: 0.6;">
+				<a href="privacy.html" style="color: inherit;">Политика конфиденциальности</a> | 
+				<a href="use.html" style="color: inherit;">Условия использования</a>
+			</p>
+		</div>
+	</footer>
+	
+	<div id="preloader" style="
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: var(--bg-color);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 9999;
+		transition: opacity 0.5s;
+	">
+		<div class="spinner" style="width: 60px; height: 60px;"></div>
+	</div>
+	
+	<script>
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				document.getElementById('preloader').style.opacity = '0';
+				setTimeout(() => {
+					document.getElementById('preloader').style.display = 'none';
+				}, 500);
+			}, 1000);
+		});
+	</script>
+	
+	<script src="script.js"></script>
+</body>
+</html>

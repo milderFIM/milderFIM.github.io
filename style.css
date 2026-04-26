@@ -1,0 +1,767 @@
+/* --- глобальные стили и переменные --- */
+:root {
+	/* Светлая тема (по умолчанию) */
+	--bg-color: #F4F4F2;
+	--text-color: #333333;
+	--primary-color: #82A284;
+	--accent-color: #E57373;
+	--white-color: #FFFFFF;
+	--card-bg: #FFFFFF;
+	--footer-bg: #333333;
+	--footer-text: #F4F4F2;
+	--border-color: #e0e0e0;
+	--shadow-color: rgba(0, 0, 0, 0.08);
+	--shadow-hover: rgba(0, 0, 0, 0.12);
+	--input-bg: #FFFFFF;
+	--input-border: #ccc;
+	--sidebar-bg: #FFFFFF;
+	--font-family: 'Times New Roman', Times, serif;
+	
+	/* Темная тема - задается через атрибут data-theme="dark" */
+}
+
+/* --- общие стили --- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-family);
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	line-height: 1.6;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+a {
+	text-decoration: none;
+	color: var(--accent-color);
+}
+
+/* --- шапка сайта --- */
+.header {
+	background-color: var(--white-color);
+	padding: 1rem 0;
+	box-shadow: 0 2px 4px var(--shadow-color);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: var(--primary-color);
+}
+
+.main-nav ul {
+	list-style: none;
+	display: flex; /* это правило будет работать только на десктопе */
+}
+
+.main-nav ul li {
+	margin-left: 20px;
+}
+
+.main-nav ul a {
+	color: var(--text-color);
+	font-size: 1rem;
+	padding-bottom: 5px;
+	transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.main-nav ul a:hover,
+.main-nav ul a.active {
+	color: var(--accent-color);
+	border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- стили для адаптивного гамбургер-меню --- */
+#hamburger-icon {
+	display: none; /* скрыто по умолчанию */
+	cursor: pointer;
+	width: 30px;
+	height: 25px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#hamburger-icon .bar {
+	height: 3px;
+	width: 100%;
+	background-color: var(--text-color);
+	border-radius: 2px;
+}
+
+/* --- общие стили страниц --- */
+.hero, .hero-nutrition, .hero-workouts, .hero-blog, .hero-about, .hero-ovs, .hero-avo, .hero-los, .hero-smu, .hero-salat, .hero-ragu, .hero-zar, .hero-sil, .hero-ras {
+	min-height: 40vh;
+	background-size: cover;
+	background-position: center;
+	color: var(--white-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0 20px;
+}
+
+.hero {
+	height: 60vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/минимализм.jpeg');
+}
+
+.hero-nutrition {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/еда.jpeg');
+}
+
+.hero-workouts {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/штанга.jpeg');
+}
+
+.hero-blog {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/блог.jpeg');
+}
+
+.hero-about {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/атмосфера.jpeg');
+}
+
+.hero-ovs {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/shutterstock_2465129165.jpeg');
+}
+
+.hero-avo { 
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/e4678b1f-ea47-4f3c-b850-95857c9da367.jpg');
+}
+
+.hero-los { 
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/i (6).jpg');
+}
+
+.hero-smu { 
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/zelenii_smuzi_s_myatoi_i_avokado-788930.jpg');
+}
+
+.hero-salat {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/i.jpg');
+}
+
+.hero-ragu {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/recept-4410-1240x826.jpg');
+}
+
+.hero-zar {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/171612-1636941662.jpeg');
+}
+
+.hero-sil {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/силовая.jpg');
+}
+
+.hero-ras {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/растяжка2.jpg');
+}
+
+/* --- главный экран и общие стили секций --- */
+.hero-content h2 {
+	font-size: 2.8rem;
+	margin-bottom: 1rem;
+	letter-spacing: 1px;
+}
+
+.hero-content p {
+	font-size: 1.2rem;
+	max-width: 600px;
+	margin: 0 auto 2rem auto;
+}
+
+.section-title {
+	text-align: center;
+	font-size: 2.5rem;
+	color: var(--primary-color);
+	margin-bottom: 40px;
+}
+
+/* --- кнопки --- */
+.btn {
+	display: inline-block;
+	background-color: var(--accent-color);
+	color: var(--white-color);
+	padding: 12px 25px;
+	border-radius: 5px;
+	font-size: 1.1rem;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+	background-color: #d35f5f;
+	transform: translateY(-2px);
+}
+
+.btn-secondary {
+	display: inline-block;
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+	background-color: #6a866c;
+	transform: translateY(-2px);
+}
+
+.btn-read-more {
+	font-weight: bold;
+	color: var(--accent-color);
+	align-self: flex-start;
+}
+
+/* --- карточки - универсальный компонент --- */
+.features, .recipes, .programs {
+	padding: 60px 0;
+}
+
+.features-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.card {
+	background-color: var(--card-bg);
+	border-radius: 8px;
+	box-shadow: 0 4px 10px var(--shadow-color);
+	overflow: hidden;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 1px solid var(--border-color);
+}
+
+.card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 8px 20px var(--shadow-hover);
+}
+
+.card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.card h3 {
+	font-size: 1.5rem;
+	margin: 15px 0;
+	color: var(--primary-color);
+}
+
+.card p {
+	font-size: 1rem;
+	padding: 0 20px;
+	margin-bottom: 20px;
+	flex-grow: 1;
+}
+/*фото для тренировок*/
+.photograph{
+	margin-left: 20px;
+	width: 600px;
+	height: 400px;
+}
+/* --- стили для страницы питания --- */
+.filter-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
+}
+
+.filter-btn {
+	background-color: transparent;
+	border: 2px solid var(--primary-color);
+	color: var(--primary-color);
+	padding: 10px 20px;
+	border-radius: 20px;
+	cursor: pointer;
+	font-family: var(--font-family);
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+	background-color: var(--primary-color);
+	color: var(--white-color);
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group label {
+	margin-bottom: 8px;
+	font-size: 1rem;
+	color: var(--text-color);
+}
+
+.form-group input,
+.form-group select {
+	padding: 12px;
+	background-color: var(--input-bg);
+	border: 1px solid var(--input-border);
+	border-radius: 5px;
+	font-size: 1rem;
+	font-family: var(--font-family);
+	color: var(--text-color);
+}
+
+/* --- стили для страницы блога --- */
+.blog-layout {
+	padding: 60px 0;
+}
+
+.blog-layout .container {
+	display: grid;
+	grid-template-columns: 2.5fr 1fr;
+	gap: 40px;
+}
+
+.post-preview {
+	display: flex;
+	background-color: var(--card-bg);
+	border-radius: 8px;
+	box-shadow: 0 4px 10px var(--shadow-color);
+	margin-bottom: 30px;
+	overflow: hidden;
+	transition: box-shadow 0.3s ease;
+	border: 1px solid var(--border-color);
+}
+
+.post-preview:hover {
+	box-shadow: 0 8px 20px var(--shadow-hover);
+}
+
+.post-preview img {
+	width: 250px;
+	height: auto;
+	object-fit: cover;
+}
+
+.post-content {
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+}
+
+.post-content h3 {
+	color: var(--primary-color);
+	font-size: 1.6rem;
+	margin-bottom: 10px;
+}
+
+.post-excerpt {
+	flex-grow: 1;
+	margin-bottom: 15px;
+}
+
+.blog-sidebar {
+	position: sticky;
+	top: 100px;
+	align-self: start;
+}
+
+.sidebar-widget {
+	background-color: var(--sidebar-bg);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px var(--shadow-color);
+	margin-bottom: 25px;
+	border: 1px solid var(--border-color);
+}
+
+.sidebar-widget h4 {
+	font-size: 1.3rem;
+	color: var(--primary-color);
+	margin-bottom: 15px;
+	border-bottom: 2px solid var(--border-color);
+	padding-bottom: 10px;
+}
+
+.popular-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.tag {
+	background-color: var(--primary-color);
+	color: white;
+	padding: 5px 10px;
+	border-radius: 15px;
+	font-size: 0.9rem;
+	transition: transform 0.2s ease;
+}
+
+.tag:hover {
+	transform: translateY(-2px);
+	background-color: var(--accent-color);
+}
+
+.sidebar-widget ul {
+	list-style: none;
+}
+
+.sidebar-widget ul li {
+	margin-bottom: 10px;
+}
+
+.sidebar-widget ul a {
+	color: var(--text-color);
+	transition: color 0.3s ease;
+}
+
+.sidebar-widget ul a:hover {
+	color: var(--accent-color);
+}
+
+/* --- Активные ссылки в блоге --- */
+.category-list a.active,
+.recent-posts-list a.active {
+	color: var(--accent-color);
+	font-weight: bold;
+	position: relative;
+}
+
+.category-list a.active::before,
+.recent-posts-list a.active::before {
+	content: "▶";
+	position: absolute;
+	left: -15px;
+	color: var(--accent-color);
+}
+
+/* --- стили для страницы о проекте --- */
+.about-philosophy {
+	padding: 60px 0;
+}
+
+.philosophy-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	margin-top: 40px;
+}
+
+.philosophy-item {
+	text-align: center;
+	padding: 20px;
+	background-color: var(--card-bg);
+	border-radius: 8px;
+	box-shadow: 0 4px 10px var(--shadow-color);
+	border: 1px solid var(--border-color);
+}
+
+.philosophy-icon {
+	font-size: 3rem;
+	margin-bottom: 15px;
+	display: inline-block;
+}
+
+.philosophy-item h3 {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+	margin-bottom: 10px;
+}
+
+.about-creator {
+	padding: 60px 0;
+	background-color: var(--bg-color);
+}
+
+.creator-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.creator-image img {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow: 0 4px 15px var(--shadow-hover);
+}
+
+.creator-text h3 {
+	font-size: 1.8rem;
+	color: var(--primary-color);
+	margin-bottom: 15px;
+}
+
+.txtovs {
+  margin: 20px;
+  display: inline-block; /* Элемент становится строчно-блочным, займёт ровно столько места, сколько нужно */
+  text-align: left;
+  padding: 10px 70px 40px 40px; /* Равномерные отступы вокруг текста */
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  border: 1px solid var(--border-color);
+}
+/*TEXT*/
+.otstup {
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: xx-large;
+}
+
+/* Для вложенных элементов */
+.txtovs > div {
+  display: block;
+  width: fit-content; /* Ширина равна содержимому */
+  margin: 0 auto; /* Центрирование, если нужно выровнять блоки по центру */
+}
+
+
+
+
+/*овсянка*/
+.frameblock {
+	border: 1px solid black;
+}
+/*линия*/
+.line {
+	border-bottom: 2px;
+	border-bottom-style: solid;
+	margin: 1em;
+	margin: -3px;
+}
+
+/* Анимация появления при скролле */
+.card, .post-preview, .philosophy-item {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.visible, .post-preview.visible, .philosophy-item.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* --- Стили для спиннера --- */
+.spinner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+}
+
+.spinner-circle {
+	width: 50px;
+	height: 50px;
+	border: 5px solid var(--border-color);
+	border-top: 5px solid var(--primary-color);
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	margin-bottom: 15px;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.spinner p {
+	color: var(--primary-color);
+	font-size: 1.1rem;
+	margin-top: 10px;
+}
+
+/* --- подвал --- */
+.footer {
+	background-color: var(--footer-bg);
+	color: var(--footer-text);
+	text-align: center;
+	padding: 20px 0;
+}
+
+/* === медиа-запросы и адаптивность === */
+
+/* стили для мобильных устройств (до 992px) */
+@media (max-width: 992px) {
+	/* --- мобильное меню --- */
+	#hamburger-icon {
+		display: flex;
+	}
+	
+	.theme-switcher {
+		margin-left: 10px;
+	}
+
+	.main-nav ul {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100%;
+		background-color: var(--white-color);
+		box-shadow: 0 4px 6px var(--shadow-color);
+		padding: 10px 0;
+		z-index: 1000;
+	}
+
+	.main-nav ul.active {
+		display: flex;
+	}
+	
+	[data-theme="dark"] .main-nav ul {
+		background-color: var(--card-bg);
+	}
+
+	/* --- адаптивность для других блоков --- */
+	.features-grid,
+	.philosophy-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.blog-layout .container {
+		grid-template-columns: 1fr;
+	}
+
+	.blog-sidebar {
+		position: static;
+		margin-top: 40px;
+	}
+
+	.post-preview {
+		flex-direction: column;
+	}
+	
+	.post-preview img {
+		width: 100%;
+		height: 200px;
+	}
+
+	.creator-wrapper {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.calculator-form {
+		grid-template-columns: 1fr;
+	}
+	
+	.calculator-wrapper {
+		padding: 25px;
+	}
+	
+	.hero-content h2 {
+		font-size: 2.2rem;
+		line-height: 1.2;
+	}
+
+	.hero-content p {
+		font-size: 1.1rem;
+	}
+
+	.section-title {
+		font-size: 2rem;
+	}
+
+	.features-grid {
+		gap: 20px;
+	}
+	
+	.timer-display {
+		font-size: 3.5rem;
+		padding: 15px;
+	}
+	
+	.timer-controls {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.timer-btn {
+		width: 100%;
+		max-width: 200px;
+	}
+}
+
+/* --- Глобальные исправления для всех страниц --- */
+body {
+	overflow-x: hidden; /* Запрещаем горизонтальный скролл */
+	width: 100%;
+	max-width: 100vw; /* Максимальная ширина = ширина viewport */
+}
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 20px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* Исправляем шапку для мобильных */
+@media (max-width: 992px) {
+	.header .container {
+		flex-wrap: wrap;
+		padding: 10px 15px;
+	}
+	
+	.logo {
+		font-size: 1.3rem;
+		margin-right: auto;
+	}
+	
+	#hamburger-icon {
+		margin-left: 10px;
+	}
+	
+	/* Убираем горизонтальный скролл в меню */
+	.main-nav ul {
+		max-width: 100vw;
+		overflow-x: hidden;
+	}
+	
+	.main-nav ul li {
+		margin-left: 0;
+		width: 100%;
+		text-align: center;
+		padding: 10px 0;
+	}
+}

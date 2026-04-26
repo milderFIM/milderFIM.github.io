@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Гармония Тела - Ваш путь к здоровому образу жизни</title>
+	<link rel="stylesheet" href="style.css">
+	
+	<meta name="description" content="Гармония Тела - ваш путеводитель к здоровому образу жизни. Рецепты, тренировки, советы по питанию.">
+	<meta name="keywords" content="здоровье, питание, тренировки, фитнес, рецепты, калькулятор калорий">
+	<meta property="og:title" content="Гармония Тела">
+	<meta property="og:description" content="Найдите баланс своего тела и духа">
+	<meta property="og:image" content="images/минимализм.jpeg">
+</head>
+
+<body>
+	<!-- шапка сайта -->
+	<header class="header">
+		<div class="container">
+			<a href="index.html" class="logo">Гармония Тела</a>
+			
+			<!-- обертка для навигации -->
+			<nav class="main-nav">
+				<!-- список ссылок -->
+				<ul id="nav-links">
+					<li><a href="index.html" class="active">Главная</a></li>
+					<li><a href="nutrition.html">Питание</a></li>
+					<li><a href="workouts.html">Тренировки</a></li>
+					<li><a href="blog.html">Статьи</a></li>
+					<li><a href="about.html">О проекте</a></li>
+				</ul>
+			</nav>
+			
+			<!-- иконка гамбургера. появляется только на мобильных -->
+			<div id="hamburger-icon">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<!-- главный экран -->
+		<section class="hero">
+			<div class="hero-content">
+				<h2>Найдите свой баланс. Начните здоровый путь сегодня.</h2>
+				<p>Простые рецепты, эффективные тренировки и полезные советы для вашего здоровья и хорошего настроения.</p>
+				<a href="#features" class="btn">Узнать больше</a>
+			</div>
+		</section>
+		<!-- разделы сайта -->
+		<section id="features" class="features">
+			<div class="container">
+				<h2>Основные разделы</h2>
+				<div class="features-grid">
+					<!-- карточка 1: питание -->
+					<div class="card">
+						<img src="images/тарелка.jpeg" alt="Здоровая еда">
+						<h3>Правильное Питание</h3>
+						<p>Откройте для себя мир вкусных и полезных рецептов, которые зарядят вас энергией на весь день.</p>
+						<a href="nutrition.html" class="btn-secondary">Перейти к рецептам</a>
+					</div>
+
+					<!-- карточка 2: тренировки -->
+					<div class="card">
+						<img src="images/тренировка.jpeg" alt="Занятия йогой">
+						<h3>Эффективные Тренировки</h3>
+						<p>Комплексы упражнений для дома, которые помогут вам оставаться в тонусе без посещения зала.</p>
+						<a href="workouts.html" class="btn-secondary">Начать тренировку</a>
+					</div>
+
+					<!-- карточка 3: блог -->
+					<div class="card">
+						<img src="images/блокнот.jpeg" alt="Полезные статьи">
+						<h3>Полезные Статьи</h3>
+						<p>Читайте о мотивации, здоровом сне, борьбе со стрессом и других важных аспектах гармоничной жизни.</p>
+						<a href="blog.html" class="btn-secondary">Читать блог</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- подвал сайта -->
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; 2026 Гармония Тела</p>
+			<p style="margin-top: 5px; font-size: 0.7rem; opacity: 0.6;">
+				<a href="privacy.html" style="color: inherit;">Политика конфиденциальности</a> | 
+				<a href="use.html" style="color: inherit;">Условия использования</a>
+			</p>
+		</div>
+	</footer>
+	
+	<div id="preloader" style="
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: var(--bg-color);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 9999;
+		transition: opacity 0.5s;
+	">
+		<div class="spinner" style="width: 60px; height: 60px;"></div>
+	</div>
+	
+	<script>
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				document.getElementById('preloader').style.opacity = '0';
+				setTimeout(() => {
+					document.getElementById('preloader').style.display = 'none';
+				}, 500);
+			}, 1000);
+		});
+	</script>
+	
+	<script src="script.js"></script>
+</body>
+</html>
